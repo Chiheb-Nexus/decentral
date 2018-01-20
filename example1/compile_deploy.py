@@ -33,7 +33,8 @@ transaction hash: {0}
 from account: {1} / Gas used: {2}'''.format(tx_hash, w3.eth.accounts[0], GAS))
 
 # Wait untill the transaction will be mined! otherwise tx_receipt will be None
-while w3.eth.getTransactionReceipt(tx_receipt) is None:
+while w3.eth.getTransactionReceipt(tx_hash) is None:
+	print('Waiting the transaction: {0} to be mined'.format(tx_hash))
 	time.sleep(1)
 
 

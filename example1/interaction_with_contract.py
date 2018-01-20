@@ -21,7 +21,10 @@ print(contract_instance.getString())
 print(contract_instance.hello())
 tx_hash = contract_instance.setString('Love Ethereum DAPPS!', transact={'from': w3.eth.accounts[0]})
 print('Setting new string Done with transaction hash: {0}'.format(tx_hash))
-time.sleep(10)
+# Wait the transaction to be mined!
+while w3.eth.getTransactionReceipt(tx_hash) is None:
+	print('Waiting the transaction: {0} to be mined'.format(tx_hash))
+	time.sleep(1)
 print(contract_instance.getString())
 print(contract_instance.hello())
 

@@ -356,19 +356,23 @@ Contract is compiled
 RPC connection to the blockchain node opened at: http://127.0.0.1:8545
 Contract created
 Contract deployed:
-transaction hash: 0x5a102418325e9323b94950cfbcdbe75cf939bdfde5f390ac9ae8fc1ad8168edb
+transaction hash: 0x690a8aa45ed29ff121b1573699320fd3328cdccac8b0cbbeb1f4208050001b3b
 from account: 0x53A4579EB6D5e48642FD2b4909FE3f762b1608b0 / Gas used: 410000
+Waiting the transaction: 0x690a8aa45ed29ff121b1573699320fd3328cdccac8b0cbbeb1f4208050001b3b to be mined
+Waiting the transaction: 0x690a8aa45ed29ff121b1573699320fd3328cdccac8b0cbbeb1f4208050001b3b to be mined
 Contract information saved in: contract_informations.json
+
 ```
 
 Et on va remarquer que dans la console où `Geth` exécute les tâches de minage, on trouvera une information simaile à ceci:
 
 ```bash
-INFO [01-20|18:42:54] 🔨 mined potential block                  number=865 hash=9c3611…793cc5
-INFO [01-20|18:42:54] Commit new mining work                   number=866 txs=0 uncles=0 elapsed=238µs
-INFO [01-20|18:42:56] Submitted contract creation              fullhash=0x5a102418325e9323b94950cfbcdbe75cf939bdfde5f390ac9ae8fc1ad8168edb contract=0x5B7Af6Eda209339CD4210F9038d85232dC3CA748
-INFO [01-20|18:42:58] Successfully sealed new block            number=866 hash=75b3b5…15a1d3
-INFO [01-20|18:42:58] 🔗 block reached canonical chain          number=861 hash=ed2643…f43c28
+INFO [01-20|20:02:56] 🔨 mined potential block                  number=907 hash=f0d47b…218789
+INFO [01-20|20:02:56] Commit new mining work                   number=908 txs=0 uncles=0 elapsed=164.527µs
+INFO [01-20|20:02:56] Submitted transaction                    fullhash=0xa5c100ea33545aa0de973ec6cff75782c59d6cfbf7d92483bccba0c1bdd9d764 recipient=0x3206E08918715a6F0368337ca477ee0D0cB4b72F
+INFO [01-20|20:03:00] Successfully sealed new block            number=908 hash=687c2a…187462
+INFO [01-20|20:03:00] 🔗 block reached canonical chain          number=903 hash=c5957e…5723a6
+INFO [01-20|20:03:00] 🔨 mined potential block                  number=908 hash=6
 ```
 Ceci dit, notre contract à été bien déployé et il sera miné dans le prochain bloc si le gas utilisé dans la transaction est assez suffisant pour la miner dans les plus bref délais.
 
@@ -382,7 +386,13 @@ On aura comme résultat:
 ```bash
 Hello world!
 Hello world!
-Setting new string Done with transaction hash: 0xbafd55eeb62198d018f36c935a84f94f4f57123935e848d2b0a137498131016e
+Setting new string Done with transaction hash: 0xa5c100ea33545aa0de973ec6cff75782c59d6cfbf7d92483bccba0c1bdd9d764
+Waiting the transaction: 0xa5c100ea33545aa0de973ec6cff75782c59d6cfbf7d92483bccba0c1bdd9d764 to be mined
+Waiting the transaction: 0xa5c100ea33545aa0de973ec6cff75782c59d6cfbf7d92483bccba0c1bdd9d764 to be mined
+Waiting the transaction: 0xa5c100ea33545aa0de973ec6cff75782c59d6cfbf7d92483bccba0c1bdd9d764 to be mined
+Waiting the transaction: 0xa5c100ea33545aa0de973ec6cff75782c59d6cfbf7d92483bccba0c1bdd9d764 to be mined
+Waiting the transaction: 0xa5c100ea33545aa0de973ec6cff75782c59d6cfbf7d92483bccba0c1bdd9d764 to be mined
+Waiting the transaction: 0xa5c100ea33545aa0de973ec6cff75782c59d6cfbf7d92483bccba0c1bdd9d764 to be mined
 Love Ethereum DAPPS!
 Love Ethereum DAPPS!
 
