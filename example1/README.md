@@ -281,25 +281,24 @@ transaction hash: {0}
 from account: {1} / Gas used: {2}'''.format(tx_hash, w3.eth.accounts[0], GAS))
 
 # Wait untill the transaction will be mined! otherwise tx_receipt will be None
+while w3.eth.getTransactionReceipt(tx_receipt) is None:
+	time.sleep(1)
+
+
+# Get the contract transaction informations
 tx_receipt = w3.eth.getTransactionReceipt(tx_hash)
-if not tx_receipt:
-	time.sleep(10)
-	# Get the contract transaction informations
-	tx_receipt = w3.eth.getTransactionReceipt(tx_hash)
-	# Get the contract address after mining it
-	contract_address = tx_receipt.get('contractAddress')
+# Get the contract address after mining it
+contract_address = tx_receipt.get('contractAddress')
 
-	# Name of the file in which we'll have contract ABI and contract address
-	contract_informations_name = 'contract_informations.json'
+# Name of the file in which we'll have contract ABI and contract address
+contract_informations_name = 'contract_informations.json'
 
-	with open(contract_informations_name, 'w') as f:
-		f.write(json.dumps({
-			'abi': contract_interface.get('abi'),
-			'contract_address': contract_address
-			}))
-	print('Contract information saved in: {0}'.format(contract_informations_name))
-else:
-	print("Transaction wasn't mined in 5s!")
+with open(contract_informations_name, 'w') as f:
+	f.write(json.dumps({
+		'abi': contract_interface.get('abi'),
+		'contract_address': contract_address
+		}))
+print('Contract information saved in: {0}'.format(contract_informations_name))
 
 ```
 
