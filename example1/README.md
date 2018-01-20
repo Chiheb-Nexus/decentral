@@ -71,7 +71,8 @@ L'exemple va se décomposer en trois parties:
 
 Tout d'abord, on va créer un nouveau compte d'Ethereum:
 ```bash
-geth account new```
+geth account new
+```
 
 Vous allez avoir un message comme celui là:
 ```bash
