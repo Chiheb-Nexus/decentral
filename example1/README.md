@@ -394,12 +394,14 @@ Donc, au final, on a crée un `Smart Contract` avec le langage de programmation 
 
 **Pour plus d'informations:**
 
-. [ethereum.org](https://www.ethereum.org/) 
-. [web3.py - Github](https://github.com/ethereum/web3.py) et [web3.py - Documentation](http://web3py.readthedocs.io/en/stable/quickstart.html)
-. [web3.js - Github](https://github.com/ethereum/web3.js/) et [web3.js - Documentation](https://web3js.readthedocs.io/en/latest/)
-. [Truffle - Smart Contract framework](http://truffleframework.com/)
-. [Geth](https://geth.ethereum.org/downloads/)
-. [parity.io](https://www.parity.io/)
+- [ethereum.org](https://www.ethereum.org/) 
+- [web3.py - Github](https://github.com/ethereum/web3.py) et [web3.py - Documentation](http://web3py.readthedocs.io/en/stable/quickstart.html)
+- [web3.js - Github](https://github.com/ethereum/web3.js/) et [web3.js - Documentation](https://web3js.readthedocs.io/en/latest/)
+- [Truffle - Smart Contract framework](http://truffleframework.com/)
+- [Geth](https://geth.ethereum.org/downloads/)
+- [parity.io](https://www.parity.io/)
+
+
 
 
 
