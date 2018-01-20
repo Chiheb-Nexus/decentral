@@ -304,7 +304,7 @@ else:
 ```
 
 **interaction_with_contract.py**
-```bash
+```python
 import json
 from web3 import Web3, RPCProvider
 from web3.contract import ConciseContract
